@@ -2,12 +2,12 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jvnet.mock-javamail</groupId>
   <artifactId>mock-javamail</artifactId>
-  <version>1.11</version>
+  <version>1.11+cosium.0-SNAPSHOT</version>
   <packaging>jar</packaging>
-  
+
   <name>JavaMail mock objects</name>
   <url>https://http://java.net/projects/mock-javamail</url>
-  
+
   <scm>
     <connection>scm:git:git@github.com:Cosium/mock-javamail.git</connection>
   </scm>
@@ -25,7 +25,7 @@
       <archive>http://java.net/projects/mock-javamail/lists/users/archive</archive>
     </mailingList>
   </mailingLists>
-  
+
   <repositories>
     <repository>
       <id>java.net</id>
@@ -41,20 +41,14 @@
   </repositories>
 
   <distributionManagement>
-    <snapshotRepository>
-      <id>jvnet-nexus-snapshots</id>
-      <name>Java.net Nexus Snapshots Repository</name>
-      <url>https://maven.java.net/content/repositories/snapshots/</url>
-    </snapshotRepository>
     <repository>
-      <id>jvnet-nexus-staging</id>
-      <name>Java.net Nexus Staging Repository</name>
-      <url>https://maven.java.net/service/local/staging/deploy/maven2/</url>
+      <id>nexus-cosium-dev-releases</id>
+      <url>https://nexus.cosium.dev/repository/maven-releases/</url>
     </repository>
-    <site>
-      <id>local</id>
-      <url>svn:https://svn.java.net/svn/mock-javamail/trunk/www/</url>
-    </site>
+    <snapshotRepository>
+      <id>nexus-cosium-dev-snapshots</id>
+      <url>https://nexus.cosium.dev/repository/maven-snapshots/</url>
+    </snapshotRepository>
   </distributionManagement>
 
   <build>
@@ -84,7 +78,7 @@
         </configuration>
       </plugin>
     </plugins>
-    
+
     <extensions>
       <extension>
         <groupId>org.jvnet.wagon-svn</groupId>
@@ -93,12 +87,12 @@
       </extension>
     </extensions>
   </build>
-  
+
   <dependencies>
     <dependency>
-      <groupId>javax.mail</groupId>
-      <artifactId>mail</artifactId>
-      <version>1.4</version>
+      <groupId>com.sun.mail</groupId>
+      <artifactId>javax.mail</artifactId>
+      <version>1.6.2</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
