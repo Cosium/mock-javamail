@@ -9,9 +9,7 @@
   <url>https://http://java.net/projects/mock-javamail</url>
   
   <scm>
-    <connection>scm:svn:https://svn.java.net/svn/mock-javamail~svn/tags/mock-javamail-1.11</connection>
-    <developerConnection>scm:svn:https://svn.java.net/svn/mock-javamail~svn/tags/mock-javamail-1.11</developerConnection>
-    <url>https://java.net/projects/mock-javamail/sources/browse/mock-javamail/tags/mock-javamail-1.11</url>
+    <connection>scm:git:git@github.com:Cosium/mock-javamail.git</connection>
   </scm>
 
   <issueManagement>
